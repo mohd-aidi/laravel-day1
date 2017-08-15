@@ -16,12 +16,17 @@
                 <li class="active"><a href="{{ url('/')}}">Home</a></li>
                 <li><a href="{{ url('/about')}}">About</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
+                <li><a href="{{ url('/tickets') }}">Tickets</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Member
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ url('/users/register') }}">Register</a></li>
-                        <li><a href="{{ url('/users/login') }}">Login</a></li>
+                        @if (Auth::check())
+                            <li><a href="{{ url('/logout')}}">Logout</a></li>
+                        @else
+                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                        @endif
                     </ul>
                 </li>
             </ul>

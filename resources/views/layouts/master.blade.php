@@ -9,18 +9,18 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Bootstrap Material Design -->
-    <link rel="stylesheet" type="text/css" href="material/css/bootstrap-material-design.css">
-    <link rel="stylesheet" type="text/css" href="material/css/ripples.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('material/css/bootstrap-material-design.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('material/css/ripples.css')}}">
 </head>
 <body>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 @include('shared.navbar')
 @yield('content')
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script src="material/js/ripples.js"></script>
-<script src="material/js/material.min.js"></script>
+<script src="{{asset('material/js/ripples.js') }}"></script>
+<script src="{{ asset('material/js/material.min.js')}}"></script>
 <script>
     $(document).ready(function() {
         // This command is used to initialize some elements and make them work properly
